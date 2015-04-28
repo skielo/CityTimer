@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "ValidateAdress";
+}
+
+<h2>Validate the following address</h2>
+<br />
+<br />
+<label>Suburb: </label> <input type="text" id="sub" />
+<label>City: </label> <input type="text" id="city" /> 
+<label>Post Code: </label> <input type="text" id="zip" />
+<input type="button" id="validate" value="Validate"/>
+
+<div id="result">
+
+</div>
+<div id="error">
+
+</div>
+<br />
+<br />
+@Html.ActionLink("Back to Home","Index")

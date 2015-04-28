@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CitiesTime.WebUI", "CitiesTime.WebUI\CitiesTime.WebUI.csproj", "{4028008C-7A40-433C-9025-9BF2AF1D6C44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CitiesTime.Tests", "CitiesTime.Tests\CitiesTime.Tests.csproj", "{BDE67C97-9514-4D47-B3B5-B0B0598421A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CitiesTime.Domain", "CitiesTime.Domain\CitiesTime.Domain.csproj", "{6F9E36CC-E41B-4BCA-B60A-9C4A954F960F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4028008C-7A40-433C-9025-9BF2AF1D6C44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4028008C-7A40-433C-9025-9BF2AF1D6C44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4028008C-7A40-433C-9025-9BF2AF1D6C44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4028008C-7A40-433C-9025-9BF2AF1D6C44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDE67C97-9514-4D47-B3B5-B0B0598421A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDE67C97-9514-4D47-B3B5-B0B0598421A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDE67C97-9514-4D47-B3B5-B0B0598421A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDE67C97-9514-4D47-B3B5-B0B0598421A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F9E36CC-E41B-4BCA-B60A-9C4A954F960F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F9E36CC-E41B-4BCA-B60A-9C4A954F960F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F9E36CC-E41B-4BCA-B60A-9C4A954F960F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F9E36CC-E41B-4BCA-B60A-9C4A954F960F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,21 @@
+﻿@model CitiesTime.WebUI.Models.CityViewModel
+
+@{
+    ViewBag.Title = "City Times";
+}
+
+<h2>Select the city to view the current hour.</h2>
+
+@Html.LabelFor(m => m.SelectedCityID)
+@Html.DropDownListFor(m => m.SelectedCityID, Model.CitiesItems, new { id="cities" })
+
+<div id="main">
+    Today is: <label id="date"></label> at <label id="hour"></label>
+</div>
+
+<br />
+<br />
+@Html.ActionLink("View Logs", "Index", "Log") <>
+@Html.ActionLink("Validate Address", "ValidateAddress")
+
+
