@@ -49,7 +49,7 @@
             beforeSend: function (xhr) {
                 xhr.setRequestHeader('access_key', key);
             },
-            data: '',
+            data: address,
             headers: {
                 "Content-Type": "application/json; charset=utf-8"
             },
