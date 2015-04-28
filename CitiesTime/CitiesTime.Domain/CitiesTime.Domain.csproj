@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\ICitiesContext.cs" />
     <Compile Include="Abstract\ICityRepository.cs" />
     <Compile Include="Abstract\ILogRepository.cs" />
     <Compile Include="Entities\City.cs" />

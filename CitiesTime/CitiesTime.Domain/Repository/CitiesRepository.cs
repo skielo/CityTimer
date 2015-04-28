@@ -2,6 +2,7 @@
 using CitiesTime.Domain.Entities;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,9 +11,9 @@ namespace CitiesTime.Domain.Repository
 {
     public class CitiesRepository: ICityRepository
     {
-        public CitiesContext Context { get; set; }
+        public ICitiesContext Context { get; set; }
 
-        public CitiesRepository(CitiesContext cont)
+        public CitiesRepository(ICitiesContext cont)
         {
             Context = cont;
         }

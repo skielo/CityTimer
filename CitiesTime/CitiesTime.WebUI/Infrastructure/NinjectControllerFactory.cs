@@ -30,6 +30,7 @@ namespace CitiesTime.WebUI.Infrastructure
         {
             ninjectKernel.Bind<ICityRepository>().To<CitiesRepository>();
             ninjectKernel.Bind<ILogRepository>().To<LogRequestRepository>();
+            ninjectKernel.Bind<ICitiesContext>().To<CitiesContext>();
         }
     }
 }

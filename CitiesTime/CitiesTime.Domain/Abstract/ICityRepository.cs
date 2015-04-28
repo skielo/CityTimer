@@ -2,13 +2,14 @@
 using CitiesTime.Domain.Repository;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 
 
 namespace CitiesTime.Domain.Abstract
 {
     public interface ICityRepository
     {
-        CitiesContext Context { get; set; }
+        ICitiesContext Context { get; set; }
         List<City> GetCities();
         City GetCityById(int id);
     }

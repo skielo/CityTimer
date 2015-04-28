@@ -1,4 +1,5 @@
-﻿using CitiesTime.Domain.Entities;
+﻿using CitiesTime.Domain.Abstract;
+using CitiesTime.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CitiesTime.Domain.Repository
 {
-    public class CitiesContext : DbContext
+    public class CitiesContext : DbContext, ICitiesContext
     {
         public CitiesContext()
         {

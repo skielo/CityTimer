@@ -2,6 +2,7 @@
 using CitiesTime.Domain.Entities;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,8 +11,8 @@ namespace CitiesTime.Domain.Repository
 {
     public class LogRequestRepository: ILogRepository
     {
-        public CitiesContext Context {get; set;}
-        public LogRequestRepository(CitiesContext cont)
+        public ICitiesContext Context { get; set; }
+        public LogRequestRepository(ICitiesContext cont)
         {
             Context = cont;
         }
@@ -23,7 +24,7 @@ namespace CitiesTime.Domain.Repository
         public void SaveRequestLog(RequestLog entity)
         {
             Context.Requests.Add(entity);
-            Context.SaveChanges();
+            ((DbContext)Context).SaveChanges();
         }
 
         /// <summary>

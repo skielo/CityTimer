@@ -6,6 +6,7 @@ using Ninject;
 using CitiesTime.Domain.Repository;
 using CitiesTime.Domain.Entities;
 using System.Collections.Generic;
+using System.Data.Entity;
 
 namespace CitiesTime.Tests
 {
@@ -18,8 +19,9 @@ namespace CitiesTime.Tests
 
         public RepositoryTest()
         {
-            kernel.Bind<ICityRepository>().To<FakeCityRepository>();
-            kernel.Bind<ILogRepository>().To<FakeLogRepository>();
+            kernel.Bind<ICityRepository>().To<CitiesRepository>();
+            kernel.Bind<ILogRepository>().To<LogRequestRepository>();
+            kernel.Bind<ICitiesContext>().To<FakeContext>();
         }
 
         [TestInitialize]
@@ -33,6 +35,7 @@ namespace CitiesTime.Tests
         public void Get_All_Cities()
         {
             //Arrange
+            ((FakeContext)repo.Context).SetUp();
             var cities = repo.GetCities();
 
             //Assert
@@ -45,6 +48,7 @@ namespace CitiesTime.Tests
         public void Get_City_By_ID()
         {
             //Arrange
+            ((FakeContext)repo.Context).SetUp();
             var city1 = repo.GetCityById(1);
             var city2 = repo.GetCityById(2);
             var city3 = repo.GetCityById(10);
@@ -59,10 +63,11 @@ namespace CitiesTime.Tests
         public void Get_List_Logs()
         {
             //Arrange
+            ((FakeContext)repo.Context).SetUp();
             var logs = repoLog.GetLogHistory();
 
             //Assert
-            Assert.AreEqual<int>(3, logs.Count);
+            Assert.AreEqual<int>(5, logs.Count);
             Assert.AreEqual<int>(3, logs[2].ID);
             Assert.IsNull(logs.Find(l => l.ID == 20));
         }
@@ -72,6 +77,7 @@ namespace CitiesTime.Tests
         public void Cannot_Save_Because_IsNot_Implemented()
         {
             //Arrange
+            ((FakeContext)repo.Context).SetUp();
             var log = new RequestLog { ID = 1, CityID = 2, TimeRequest = DateTime.Today};
         
             //Assert
@@ -79,65 +85,29 @@ namespace CitiesTime.Tests
         }
     }
 
-    public class FakeCityRepository : ICityRepository
+    public class FakeContext : DbContext, ICitiesContext
     {
-        private static List<City> cities = new List<City>() 
+        public DbSet<City> Cities { get; set; }
+        public DbSet<RequestLog> Requests { get; set; }
+
+        public FakeContext()
         {
-            new City { ID=1, Name="Buenos Aires", TimeZoneId="Argentina Standard Time"},
-            new City { ID=2, Name="Paris", TimeZoneId="W. Europe Standard Time"},
-            new City { ID=3, Name="London", TimeZoneId="Greenwich Standard Time"}
-        };
-        public CitiesContext Context
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
+
         }
 
-        public List<City> GetCities()
+        public void SetUp()
         {
-            return cities;
+            Cities.Add(new City { ID = 1, Name = "Buenos Aires", TimeZoneId = "Argentina Standard Time" });
+            Cities.Add(new City { ID = 2, Name = "Paris", TimeZoneId = "W. Europe Standard Time" });
+            Cities.Add(new City { ID = 3, Name = "London", TimeZoneId = "Greenwich Standard Time" });
+            Requests.Add(new RequestLog { CityID = 1, ID = 1, TimeRequest = DateTime.Today });
+            Requests.Add(new RequestLog { CityID = 1, ID = 2, TimeRequest = DateTime.Today });
+            Requests.Add(new RequestLog { CityID = 3, ID = 3, TimeRequest = DateTime.Today });
         }
 
-        public City GetCityById(int id)
-        {
-            return cities.Find(c => c.ID == id);
-        }
-    }
-
-    public class FakeLogRepository : ILogRepository
-    {
-        private static List<RequestLog> logs = new List<RequestLog>() 
-        {
-            new RequestLog { CityID=1, ID=1, TimeRequest=DateTime.Today},
-            new RequestLog { CityID=1, ID=2, TimeRequest=DateTime.Today},
-            new RequestLog { CityID=3, ID=3, TimeRequest=DateTime.Today}
-        };
-        public CitiesContext Context
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public void SaveRequestLog(RequestLog entity)
+        public override int SaveChanges()
         {
             throw new NotImplementedException();
-        }
-
-        public List<RequestLog> GetLogHistory()
-        {
-            return logs;
         }
     }
 }

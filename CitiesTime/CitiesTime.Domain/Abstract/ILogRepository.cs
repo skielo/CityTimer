@@ -8,7 +8,7 @@ namespace CitiesTime.Domain.Abstract
 {
     public interface ILogRepository
     {
-        CitiesContext Context {get; set;}
+        ICitiesContext Context { get; set; }
         void SaveRequestLog(RequestLog entity);
         List<RequestLog> GetLogHistory();
     }
