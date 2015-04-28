@@ -28,7 +28,7 @@
                 "Suburb": $("#sub").val(),
                 "City": $("#city").val(),
                 "PostCode": $("#zip").val(),
-                "CountryCode": ""
+                "CountryCode": "NZ"
             },
             "Email": null,
             "ContactPerson": null,
