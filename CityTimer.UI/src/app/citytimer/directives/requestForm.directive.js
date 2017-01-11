@@ -44,17 +44,17 @@
             vm.newRequest.timeAtLocation = moment.utc().unix();
             vm.newRequest.userName = vm.user.email;
             cityTimerService.getTimezone(coords, vm.newRequest.timeAtLocation)
-                .then(result => {
-                    vm.newRequest.timeZoneId = result.timeZoneId;
-                    vm.newRequest.timeZoneName = result.timeZoneName;
-                    vm.newRequest.dstOffset = result.dstOffset;
-                    vm.newRequest.rawOffset = result.rawOffset;
-                    vm.newRequest.convertedRequestedTime = moment.unix(vm.newRequest.timeAtLocation).utc().utcOffset(result.rawOffset + result.dstOffset).tz(result.timeZoneId).format('YYYY-MM-DD HH:mm');
+                .then(function(response) {
+                    vm.newRequest.timeZoneId = response.timeZoneId;
+                    vm.newRequest.timeZoneName = response.timeZoneName;
+                    vm.newRequest.dstOffset = response.dstOffset;
+                    vm.newRequest.rawOffset = response.rawOffset;
+                    vm.newRequest.convertedRequestedTime = moment.unix(vm.newRequest.timeAtLocation).utc().utcOffset(response.rawOffset + response.dstOffset).tz(response.timeZoneId).format('YYYY-MM-DD HH:mm');
                     vm.newRequest.convertedLocalTime = moment.unix(vm.newRequest.timeAtLocation).format('YYYY-MM-DD HH:mm');
                     vm.requests.$add(vm.newRequest);
                     vm.newRequest = new cityTimerService.Request();
                 })
-                .catch(error => {
+                .catch(function(error) {
                     vm.error = error;
                 });
         }
