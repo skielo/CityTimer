@@ -1,0 +1,29 @@
+<h2>Past request</h2>
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Time at location</th>
+            <th>Location</th>
+            <th>Time Zone</th>
+            <th>Local Time</th>
+            <th>daylight saving?</th>
+        </tr>
+    </thead>
+    <tr ng-repeat="request in vm.requests">
+        <td>
+            <div>{{ request.convertedRequestedTime }} </div>
+        </td>
+        <td>
+            <div>{{ request.cityName }}</div>
+        </td>
+        <td>
+            <div>{{ request.timeZoneName }}</div>
+        </td>
+        <td>
+            <div>{{ request.convertedLocalTime }}</div>
+        </td>
+        <td>
+            <div>{{ request.dstOffset != 0 ? 'Yes' : 'No' }}</div>
+        </td>
+    </tr>
+</table>

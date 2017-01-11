@@ -1,0 +1,157 @@
+{
+  "name": "restoranto",
+  "private": true,
+  "dependencies": {
+    "jQuery": "latest",
+    "bootstrap": "latest",
+    "font-awesome": "~4.6.3",
+    "underscore": "latest",
+    "angular": "~1.5.8",
+    "angular-route": "~1.5.8",
+    "angular-animate": "~1.5.8",
+    "angular-messages": "~1.5.8",
+    "angular-cookies": "~1.5.8",
+    "angular-aria": "~1.5.8",
+    "angular-sanitize": "~1.5.8",
+    "angular-ui": "~0.4.0",
+    "angular-deckgrid": "~0.5.0",
+    "angular-http-auth": "~1.3.0",
+    "angular-mosaic": "~1.0.0",
+    "angular-nouislider": "~0.3.1",
+    "angular-popeye": "~1.0.5",
+    "firebase": "~3.2.1",
+    "angularfire": "~2.0.1",
+    "angular-block-ui": "~0.2.2",
+    "moment": "~2.15.1",
+    "angular-ui-calendar": "latest",
+    "angular-bootstrap": "~2.2.0",
+    "fullcalendar": "2.7.1",
+    "moment-timezone": "^0.5.11"
+  },
+  "resolutions": {
+    "angular": "1.5.10",
+    "moment": "~2.15.1"
+  },
+  "overrides": {
+    "jQuery": {
+      "main": {
+        "production": "dist/jquery.min.js"
+      }
+    },
+    "bootstrap": {
+      "main": {
+        "production": [
+          "dist/js/bootstrap.min.js",
+          "dist/css/bootstrap.min.css",
+          "dist/css/bootstrap-theme.min.css",
+          "dist/fonts/glyphicons-halflings-regular.woff2",
+          "dist/fonts/glyphicons-halflings-regular.woff",
+          "dist/fonts/glyphicons-halflings-regular.ttf"
+        ]
+      }
+    },
+    "underscore": {
+      "main": {
+        "production": "underscore-min.js"
+      }
+    },
+    "angular": {
+      "main": {
+        "production": [
+          "angular.min.js",
+          "angular-csp.css"
+        ]
+      }
+    },
+    "angular-bootstrap": {
+      "main": {
+        "production": [
+          "ui-bootstrap-csp.css",
+          "ui-bootstrap.min.js",
+          "ui-bootstrap-tpls.min.js "
+        ]
+      }
+    },
+    "angular-route": {
+      "main": {
+        "production": "angular-route.min.js"
+      }
+    },
+    "angular-animate": {
+      "main": {
+        "production": "angular-animate.min.js"
+      }
+    },
+    "angular-messages": {
+      "main": {
+        "production": "angular-messages.min.js"
+      }
+    },
+    "angular-cookies": {
+      "main": {
+        "production": "angular-cookies.min.js"
+      }
+    },
+    "angular-aria": {
+      "main": {
+        "production": "angular-aria.min.js"
+      }
+    },
+    "angular-sanitize": {
+      "main": {
+        "production": "angular-sanitize.min.js"
+      }
+    },
+    "angular-ui": {
+      "main": {
+        "production": [
+          "build/angular-ui.min.js",
+          "build/angular-ui.min.css"
+        ]
+      }
+    },
+    "angular-block-ui": {
+      "main": {
+        "production": [
+          "dist/angular-block-ui.min.js",
+          "dist/angular-block-ui.min.css"
+        ]
+      }
+    },
+    "angular-popeye": {
+      "main": {
+        "production": [
+          "release/popeye.min.js",
+          "release/popeye.min.css"
+        ]
+      }
+    },
+    "angularfire": {
+      "main": {
+        "production": "dist/angularfire.min.js"
+      }
+    },
+    "moment": {
+      "main": {
+        "production": "min/moment.min.js"
+      }
+    },
+    "fullcalendar": {
+      "main": {
+        "production": [
+          "dist/fullcalendar.min.css",
+          "dist/fullcalendar.min.js",
+          "dist/gcal.js"
+        ]
+      }
+    },
+    "font-awesome": {
+      "main": {
+        "production": [
+          "css/font-awesome.min.css",
+          "fonts/fontawesome-webfont.woff"
+        ]
+      }
+    }
+  }
+}

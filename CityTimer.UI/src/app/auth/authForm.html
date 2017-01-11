@@ -1,0 +1,26 @@
+<form name="authForm" ng-submit="authForm.$valid && vm.submitAction({user: vm.user})" class="form-signin" novalidate>
+
+    <h2 class="form-signin-heading" ng-bind="vm.formTitle"></h2>
+
+    <!--Server authentication error-->
+    <p ng-show="vm.error" class="text-danger" ng-bind="vm.error"></p>
+
+    <!--Email input-->
+    <input ng-model="vm.user.email" ng-model-options="{ updateOn: 'default blur', debounce: { default: 1000, blur: 0 } }" type="email" name="email" class="form-control" placeholder="Email address" required autofocus>
+
+    <!--Email error-->
+    <div ng-show="authForm.$submitted">
+        <p ng-show="authForm.email.$error.required" class="text-danger">Email required</p>
+        <p ng-show="authForm.email.$error.email" class="text-danger">Please enter a valid email.</p>
+    </div>
+
+    <!--Password input-->
+    <input ng-model="vm.user.password" type="password" name="password" class="form-control" placeholder="Password" required>
+
+    <!--Password error-->
+    <div ng-show="authForm.$submitted">
+        <p ng-show="authForm.password.$error.required" class="text-danger">Password required</p>
+    </div>
+
+    <button class="btn btn-lg btn-primary btn-block" ng-bind="vm.formTitle" type="submit"></button>
+</form>

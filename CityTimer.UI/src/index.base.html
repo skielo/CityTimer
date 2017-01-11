@@ -1,0 +1,90 @@
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="utf-8">
+    <title>Restoranto</title>
+    <!--Bootstrap latest compiled and minified CSS-->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+    <!--Optional theme-->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">-->
+    <!--Bootstrap latest compiled and minified CSS-->
+    <link rel="stylesheet" href="bower_components/bootstrap.min.css">
+    <!--Optional theme-->
+    <link rel="stylesheet" href="bower_components/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="bower_components/angular-ui.min.css">
+    <link rel="stylesheet" href="bower_components/ui-bootstrap-csp.css">
+    <link rel="stylesheet" href="bower_components/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/angular-csp.css">
+    <link rel="stylesheet" href="bower_components/popeye.min.css">
+    <link rel="stylesheet" href="bower_components/angular-block-ui.min.css">
+    <link rel="stylesheet" href="bower_components/fullcalendar.min.css" />
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="content/css/app.css" />
+    <!-- DataPicker -->
+    <link rel="stylesheet" href="node_modules/datetimepicker.css" />
+</head>
+
+<body>
+
+    <!--navbar directive that stays at the top of every page-->
+    <gz-navbar></gz-navbar>
+
+    <!--Main content that changes based on route-->
+    <div ng-view class="container"></div>
+    <div ng-controller="AlertController" class="col-md-2 alertbox">
+        <alert ng-repeat="alert in alerts" ng-model="alert" />
+    </div>
+    <!--Third-party JS-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.5.0/angular-route.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.0.3/firebase.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKW3DdPII_njbpHOC22Pnu7dYWHN5l_sU&libraries=places" async defer></script>-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCE-jl5M36nmW6tZblnpHS0XKM4zoEhDMA&libraries=places" async defer></script>
+
+
+    <script type="text/javascript" src="bower_components/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-animate.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-aria.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-cookies.min.js"></script>
+    <script type="text/javascript" src="bower_components/http-auth-interceptor.js"></script>
+    <script type="text/javascript" src="bower_components/angular-messages.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-route.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui.min.js"></script>
+    <script type="text/javascript" src="bower_components/angularfire.min.js"></script>
+    <script type="text/javascript" src="bower_components/popeye.min.js"></script>
+    <script type="text/javascript" src="bower_components/ui-bootstrap.min.js"></script>
+    <script type="text/javascript" src="bower_components/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="bower_components/firebase.js"></script>
+    <script type="text/javascript" src="bower_components/underscore-min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-block-ui.min.js"></script>
+    <script type="text/javascript" src="bower_components/moment.min.js"></script>
+    <script type="text/javascript" src="node_modules/datetimepicker.js"></script>
+    <script type="text/javascript" src="node_modules/datetimepicker.templates.js"></script>
+    <script type="text/javascript" src="bower_components/calendar.js"></script>
+    <script type="text/javascript" src="bower_components/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="bower_components/gcal.js"></script>
+    <script>
+        // Initialize Firebase. Use your own config values here. This is just a sample.
+        // You can copy and paste your config values by following the instructions at
+        // https://firebase.google.com/docs/web/setup#add_firebase_to_your_app.
+        var config = {
+            apiKey: "AIzaSyDq1QdlObQU8_iHD5XoKjEXIAOsvZyxCws",
+            authDomain: "artgallery-610be.firebaseapp.com",
+            databaseURL: "https://artgallery-610be.firebaseio.com",
+            storageBucket: "artgallery-610be.appspot.com"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+
+    <!--core module-->
+    <script src="app/app.min.js"></script>
+
+</body>
+
+</html>
