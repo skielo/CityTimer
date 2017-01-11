@@ -46,10 +46,10 @@
             var timestamp = time;
             var key = 'AIzaSyANMkLJCoewVllFzxNmh7ynjSfpubCn220';
             return $http.get('https://maps.googleapis.com/maps/api/timezone/json?location=' + location + '&timestamp=' + timestamp + '&key=' + key)
-                .then(result => {
+                .then(function(result) {
                     return result.data;
                 })
-                .catch(error => {
+                .catch(function(error) {
                     return error;
                 });
         }

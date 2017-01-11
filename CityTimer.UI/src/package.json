@@ -1,11 +1,11 @@
 {
-    "name": "restoranto",
+    "name": "Location Timer",
     "version": "0.0.1",
     "private": true,
-    "description": "Angular UI For the Restoranto.com Website",
+    "description": "Angular UI For the Location Timer",
     "repository": {
         "type": "git",
-        "url": "git@bitbucket.org:resultscom/resultsui.git"
+        "url": "git@github.com:skielo/CityTimer.git"
     },
     "devDependencies": {
         "angular-bootstrap-datetimepicker": "^2.0.1"

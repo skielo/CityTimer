@@ -2,22 +2,15 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Restoranto</title>
+    <title>Location Timer</title>
     <!--Bootstrap latest compiled and minified CSS-->
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="vendors/bootstrap.min.css">
     <!--Optional theme-->
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">-->
-    <!--Bootstrap latest compiled and minified CSS-->
-    <link rel="stylesheet" href="bower_components/bootstrap.min.css">
-    <!--Optional theme-->
-    <link rel="stylesheet" href="bower_components/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="bower_components/angular-ui.min.css">
-    <link rel="stylesheet" href="bower_components/ui-bootstrap-csp.css">
-    <link rel="stylesheet" href="bower_components/font-awesome.min.css">
-    <link rel="stylesheet" href="bower_components/angular-csp.css">
-    <link rel="stylesheet" href="bower_components/popeye.min.css">
-    <link rel="stylesheet" href="bower_components/angular-block-ui.min.css">
-    <link rel="stylesheet" href="bower_components/fullcalendar.min.css" />
+    <link rel="stylesheet" href="vendors/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="vendors/angular-ui.min.css">
+    <link rel="stylesheet" href="vendors/ui-bootstrap-csp.css">
+    <link rel="stylesheet" href="vendors/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/angular-csp.css">
     <!--Custom CSS-->
     <link rel="stylesheet" href="content/css/app.css" />
     <!-- DataPicker -->
@@ -35,48 +28,37 @@
         <alert ng-repeat="alert in alerts" ng-model="alert" />
     </div>
     <!--Third-party JS-->
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
-    <script src="https://code.angularjs.org/1.5.0/angular-route.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.0.3/firebase.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKW3DdPII_njbpHOC22Pnu7dYWHN5l_sU&libraries=places" async defer></script>-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCE-jl5M36nmW6tZblnpHS0XKM4zoEhDMA&libraries=places" async defer></script>
 
 
-    <script type="text/javascript" src="bower_components/jquery.min.js"></script>
-    <script type="text/javascript" src="bower_components/bootstrap.min.js"></script>
-    <script type="text/javascript" src="bower_components/angular.min.js"></script>
-    <script type="text/javascript" src="bower_components/angular-animate.min.js"></script>
-    <script type="text/javascript" src="bower_components/angular-aria.min.js"></script>
-    <script type="text/javascript" src="bower_components/angular-cookies.min.js"></script>
-    <script type="text/javascript" src="bower_components/http-auth-interceptor.js"></script>
-    <script type="text/javascript" src="bower_components/angular-messages.min.js"></script>
-    <script type="text/javascript" src="bower_components/angular-route.min.js"></script>
-    <script type="text/javascript" src="bower_components/angular-sanitize.min.js"></script>
-    <script type="text/javascript" src="bower_components/angular-ui.min.js"></script>
-    <script type="text/javascript" src="bower_components/angularfire.min.js"></script>
-    <script type="text/javascript" src="bower_components/popeye.min.js"></script>
-    <script type="text/javascript" src="bower_components/ui-bootstrap.min.js"></script>
-    <script type="text/javascript" src="bower_components/ui-bootstrap-tpls.min.js"></script>
-    <script type="text/javascript" src="bower_components/firebase.js"></script>
-    <script type="text/javascript" src="bower_components/underscore-min.js"></script>
-    <script type="text/javascript" src="bower_components/angular-block-ui.min.js"></script>
-    <script type="text/javascript" src="bower_components/moment.min.js"></script>
+    <script type="text/javascript" src="vendors/jquery.min.js"></script>
+    <script type="text/javascript" src="vendors/bootstrap.min.js"></script>
+    <script type="text/javascript" src="vendors/angular.min.js"></script>
+    <script type="text/javascript" src="vendors/angular-animate.min.js"></script>
+    <script type="text/javascript" src="vendors/angular-aria.min.js"></script>
+    <script type="text/javascript" src="vendors/angular-cookies.min.js"></script>
+    <script type="text/javascript" src="vendors/http-auth-interceptor.js"></script>
+    <script type="text/javascript" src="vendors/angular-messages.min.js"></script>
+    <script type="text/javascript" src="vendors/angular-route.min.js"></script>
+    <script type="text/javascript" src="vendors/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="vendors/angular-ui.min.js"></script>
+    <script type="text/javascript" src="vendors/angularfire.min.js"></script>
+    <script type="text/javascript" src="vendors/ui-bootstrap.min.js"></script>
+    <script type="text/javascript" src="vendors/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="vendors/firebase.js"></script>
+    <script type="text/javascript" src="vendors/underscore-min.js"></script>
+    <script type="text/javascript" src="vendors/moment.min.js"></script>
+    <script type="text/javascript" src="vendors/moment-timezone-with-data.min.js"></script>
     <script type="text/javascript" src="node_modules/datetimepicker.js"></script>
     <script type="text/javascript" src="node_modules/datetimepicker.templates.js"></script>
-    <script type="text/javascript" src="bower_components/calendar.js"></script>
-    <script type="text/javascript" src="bower_components/fullcalendar.min.js"></script>
-    <script type="text/javascript" src="bower_components/gcal.js"></script>
     <script>
-        // Initialize Firebase. Use your own config values here. This is just a sample.
-        // You can copy and paste your config values by following the instructions at
-        // https://firebase.google.com/docs/web/setup#add_firebase_to_your_app.
+        // Initialize Firebase
         var config = {
-            apiKey: "AIzaSyDq1QdlObQU8_iHD5XoKjEXIAOsvZyxCws",
-            authDomain: "artgallery-610be.firebaseapp.com",
-            databaseURL: "https://artgallery-610be.firebaseio.com",
-            storageBucket: "artgallery-610be.appspot.com"
+            apiKey: "AIzaSyDcPq_z9vh4CidkzFDyerRK0ZS7gs2Sj14",
+            authDomain: "citytimer-90920.firebaseapp.com",
+            databaseURL: "https://citytimer-90920.firebaseio.com",
+            storageBucket: "citytimer-90920.appspot.com",
+            messagingSenderId: "497040832817"
         };
         firebase.initializeApp(config);
     </script>
