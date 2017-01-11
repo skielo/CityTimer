@@ -1,0 +1,9 @@
+<form ng-submit="vm.addRequest()" class="form-inline party-form">
+    <div class="form-group">
+        <input type="text" id="Autocomplete" class="form-control" ng-model="vm.locSearch" details="vm.locDetails" options="vm.locOptions" ng-autocomplete />
+    </div>
+    <button type="submit " class="btn btn-small btn-primary ">Get local time</button>
+    <button type="button" ng-click="vm.reset()" class="btn btn-small btn-danger ">Reset</button>
+    <!--Server authentication error-->
+    <p ng-show="vm.error" class="text-danger" ng-bind="vm.error"></p>
+</form>
