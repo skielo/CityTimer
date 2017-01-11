@@ -1,0 +1,14 @@
+{
+    "name": "restoranto",
+    "version": "0.0.1",
+    "private": true,
+    "description": "Angular UI For the Restoranto.com Website",
+    "repository": {
+        "type": "git",
+        "url": "git@bitbucket.org:resultscom/resultsui.git"
+    },
+    "devDependencies": {
+        "angular-bootstrap-datetimepicker": "^2.0.1"
+    },
+    "dependencies": {}
+}
