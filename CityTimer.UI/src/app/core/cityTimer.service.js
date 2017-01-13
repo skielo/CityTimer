@@ -15,6 +15,7 @@
             Request: Request,
             getRequestsByUser: getRequestsByUser,
             getTimezone: getTimezone,
+            sendToDataAnalysis: sendToDataAnalysis,
             reset: reset
         };
 
@@ -51,6 +52,13 @@
                 })
                 .catch(function(error) {
                     return error;
+                });
+        }
+
+        function sendToDataAnalysis(data){
+            return $http.post('https://firebasesync.azurewebsites.net/api/HttpTriggerSqlDatabase?code=MoXlt/zXFbx4Cvrq2dvGuyDnIePlW0QxhAHwWOx3NsGWzFzYAtQ71Q==', data)
+                .then(function(result) {
+                    return result;
                 });
         }
 
