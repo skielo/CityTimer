@@ -52,10 +52,15 @@
                     vm.newRequest.convertedRequestedTime = moment.unix(vm.newRequest.timeAtLocation).utc().utcOffset(response.rawOffset + response.dstOffset).tz(response.timeZoneId).format('YYYY-MM-DD HH:mm');
                     vm.newRequest.convertedLocalTime = moment.unix(vm.newRequest.timeAtLocation).format('YYYY-MM-DD HH:mm');
                     vm.requests.$add(vm.newRequest);
+                    cityTimerService.sendToDataAnalysis(JSON.stringify(vm.newRequest))
+                        .then(function(response) {
+                            if(response)
+                                $rootScope.$broadcast('successAlert', { header: 'Well done.', msg: 'Your request has been process successfully.' });
+                        });
                     vm.newRequest = new cityTimerService.Request();
                 })
                 .catch(function(error) {
-                    vm.error = error;
+                    $rootScope.$broadcast('dangerAlert', { header: 'Oh snap!', msg: error });
                 });
         }
 
