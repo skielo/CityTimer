@@ -52,6 +52,7 @@
                     vm.newRequest.convertedRequestedTime = moment.unix(vm.newRequest.timeAtLocation).utc().utcOffset(response.rawOffset + response.dstOffset).tz(response.timeZoneId).format('YYYY-MM-DD HH:mm');
                     vm.newRequest.convertedLocalTime = moment.unix(vm.newRequest.timeAtLocation).format('YYYY-MM-DD HH:mm');
                     vm.requests.$add(vm.newRequest);
+                    $rootScope.$broadcast(GENERIC_EVENTS.selectedPlace, {placeId: vm.locDetails.place_id});
                     cityTimerService.sendToDataAnalysis(JSON.stringify(vm.newRequest))
                         .then(function(response) {
                             if(response)

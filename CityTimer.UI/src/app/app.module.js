@@ -1,6 +1,13 @@
 (function() {
     'use strict';
-
+    var config = {
+        apiKey: "AIzaSyDcPq_z9vh4CidkzFDyerRK0ZS7gs2Sj14",
+        authDomain: "citytimer-90920.firebaseapp.com",
+        databaseURL: "https://citytimer-90920.firebaseio.com",
+        storageBucket: "citytimer-90920.appspot.com",
+        messagingSenderId: "497040832817"
+    };
+    firebase.initializeApp(config);
     angular
         .module('app', [
             // Angular modules.
@@ -18,6 +25,7 @@
             'app.landing',
             'app.layout',
             'app.citytimer',
+            'app.places',
             'app.alert'
         ])
         .config(configFunction)

@@ -22,11 +22,20 @@ var paths = [
     './src/app/citytimer/cityTimer.controller.js',
     './src/app/citytimer/directives/requestForm.directive.js',
     './src/app/citytimer/directives/requestTable.directive.js',
+    './src/app/places/places.module.js',
+    './src/app/places/config.route.js',
+    './src/app/places/places.controller.js',
+    './src/app/places/directives/placeForm.directive.js',
+    './src/app/places/directives/placesTable.directive.js',
+    './src/app/places/directives/maps.directive.js',
     './src/app/core/core.module.js',
     './src/app/core/constants.js',
     './src/app/core/firebaseData.service.js',
     './src/app/core/cityTimer.service.js',
     './src/app/core/ngAutocomplete.js',
+    './src/app/core/storage.service.js',
+    './src/app/core/places.service.js',
+    './src/app/core/custom.directive.js',
     './src/app/layout/layout.module.js',
     './src/app/layout/navbar.directive.js',
     './src/app/alert/alert.module.js',
@@ -39,7 +48,9 @@ var pathsHtml = [
     './src/app/layout/*.html',
     './src/app/alert/directives/*.html',
     './src/app/citytimer/*.html',
-    './src/app/citytimer/directives/*.html'
+    './src/app/citytimer/directives/*.html',
+    './src/app/places/*.html',
+    './src/app/places/directives/*.html'
 ];
 
 gulp.task('content', function() {

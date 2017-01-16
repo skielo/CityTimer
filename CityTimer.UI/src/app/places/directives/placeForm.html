@@ -1,0 +1,10 @@
+<form ng-submit="vm.addPlace()" class="form-inline party-form">
+    <div class="form-group">
+        <input type="text" id="Autocomplete" class="form-control" ng-model="vm.locSearch" details="vm.locDetails" options="vm.locOptions" ng-autocomplete />
+    </div>
+    <div class="form-group">
+        <input file-input="vm.file" class="form-control" />
+    </div>
+    <button type="submit " class="btn btn-small btn-primary ">Upload file</button>
+    <button type="button" ng-click="vm.reset()" class="btn btn-small btn-danger ">Reset</button>
+</form>
