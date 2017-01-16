@@ -1,0 +1,13 @@
+<h2>Past request</h2>
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Place</th>
+        </tr>
+    </thead>
+    <tr ng-repeat="place in vm.places">
+        <td>
+            <a href="" ng-click="vm.changePlace(place)">{{ place.placeName}} </a>
+        </td>
+    </tr>
+</table>

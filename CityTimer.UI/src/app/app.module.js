@@ -25,6 +25,7 @@
             'app.landing',
             'app.layout',
             'app.citytimer',
+            'app.places',
             'app.alert'
         ])
         .config(configFunction)

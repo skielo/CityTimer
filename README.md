@@ -8,8 +8,10 @@ done using the following technologies:
       - Realtime database.
       - Authentication.
       - Hosting.
+	  - Storage.
     * Google Places API
     * Google Maps TimeZone API
+	* Google Maps markers
     * Azure Functions
     * Azure Store Tables
     
@@ -20,13 +22,16 @@ Your can either login using your email or create a new account. Once you have yo
 place to know which hour is there. Every request is logged in the Firebase database and also stored in an Azure store table using Azure
 functions.
 
+*New features:
+	- Allow user to select a place in the world and upload an image using Firebase Storage.
+	- Show the image in a Google Maps.
+
 RoadMap:
 
     * Build a DotNet Core API to connect this app with Azure tools.
     * Add bot chat using Microsoft Bot Framework.
     * Use Power BI to show collected data.
     * Add adming Portal.
-    * Display the location in google maps.
 
 Disclaimer:
 
