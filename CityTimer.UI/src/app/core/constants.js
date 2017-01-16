@@ -3,7 +3,7 @@
 
     angular
         .module('app.core')
-        .constant('PROTECTED_PATHS', ['/citytimer'])
+        .constant('PROTECTED_PATHS', ['/citytimer', '/places'])
         .constant('AUTH_EVENTS', {
             loginSuccess: 'auth-login-success',
             loginFailed: 'auth-login-failed',
@@ -13,11 +13,7 @@
             notAuthorized: 'auth-not-authorized'
         })
         .constant('GENERIC_EVENTS', {
-            addPartySuccess: 'add-party-success',
-            removePartySuccess: 'remove-party-success',
-            selectDayCalendar: 'select-day-calendar',
-            partySelected: 'party-selected',
-            editPartySuccess: 'edit-party-success'
+            selectedPlace: 'selected-place'
         });
 
 })();
