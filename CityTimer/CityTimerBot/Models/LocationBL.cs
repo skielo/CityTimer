@@ -58,7 +58,7 @@ namespace CityTimerBot.Models
             try
             {
                 var client = QueueClient.CreateFromConnectionString(ConfigurationManager.AppSettings["connectionString"], ConfigurationManager.AppSettings["queueName"]);
-                var message = new BrokeredMessage(responseData);
+                var message = new BrokeredMessage(JsonConvert.SerializeObject(responseData));
                 client.Send(message);
             }
             catch
