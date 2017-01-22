@@ -13,7 +13,11 @@ done using the following technologies:
     * Google Maps TimeZone API
 	* Google Maps markers
     * Azure Functions
+    	- C# Function
+	- NodeJs Function
     * Azure Store Tables
+    * Azure Service Bus
+    * Microsoft Bot Framework
     
 Functionality:
 
@@ -25,13 +29,14 @@ functions.
 *New features:
 	- Allow user to select a place in the world and upload an image using Firebase Storage.
 	- Show the image in a Google Maps.
+	- Bot that receives a place name and response with the current date time at this location.
+	- Azure Service Bus (every time the bot receives a location puts a message in the service bus to trigger a NodeJs Azure Functions
+	- NodeJs Azure function to store the request received by the bot in Firebase.
 
 RoadMap:
 
-    * Build a DotNet Core API to connect this app with Azure tools.
-    * Add bot chat using Microsoft Bot Framework.
     * Use Power BI to show collected data.
-    * Add adming Portal.
+    * Add admin Portal.
 
 Disclaimer:
 
