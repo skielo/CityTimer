@@ -2,3 +2,6 @@ CityTimer.UI/website/
 CityTimer.UI/src/bower_components/
 CityTimer.UI/src/node_modules/
 CityTimer.UI/node_modules/
+CityTimer/packages/
+CityTimer/CityTimerBot/bin/
+CityTimer/CityTimerBot/obj/
