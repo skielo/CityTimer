@@ -9,6 +9,7 @@ done using the following technologies:
       - Authentication.
       - Hosting.
 	  - Storage.
+    * AngularFire 3.2.0
     * Google Places API
     * Google Maps TimeZone API
 	* Google Maps markers
@@ -32,6 +33,7 @@ functions.
 	- Bot that receives a place name and response with the current date time at this location.
 	- Azure Service Bus (every time the bot receives a location puts a message in the service bus to trigger a NodeJs Azure Functions
 	- NodeJs Azure function to store the request received by the bot in Firebase.
+	- Use the new implementation of AngularFire 3.2.0 - Storage
 
 RoadMap:
 
