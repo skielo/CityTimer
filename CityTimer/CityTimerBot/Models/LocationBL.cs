@@ -131,9 +131,9 @@ namespace CityTimerBot.Models
                 var placeResponse = JsonConvert.DeserializeObject<Predictions>(response.Content.ReadAsStringAsync().Result);
                 if (placeResponse.status != "ZERO_RESULTS")
                 {
-                    foreach (var item in placeResponse.predictions)
+                    for (int i = 0; i < placeResponse.predictions.Length; i++)
                     {
-                        responseData.Add(new Tuple<string, string>(placeResponse.predictions[0].place_id, placeResponse.predictions[0].description));
+                        responseData.Add(new Tuple<string, string>(placeResponse.predictions[i].place_id, placeResponse.predictions[i].description));
                     }
                 }
             }
