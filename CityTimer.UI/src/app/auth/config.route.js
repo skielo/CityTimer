@@ -28,7 +28,7 @@
     authService.firebaseAuthObject.$onAuthStateChanged(function(authData) {
       if (!authData && pathIsProtected($location.path())) {
         authService.logout();
-        $location.path('/login');
+        $location.path('/login').search({mode: 'select'});
       }
     });
 

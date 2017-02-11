@@ -8,10 +8,14 @@
     authService.$inject = ['$firebaseAuth', 'firebaseDataService', 'cityTimerService'];
 
     function authService($firebaseAuth, firebaseDataService, cityTimerService) {
-        var firebaseAuthObject = $firebaseAuth();
+        var authObject = firebase.auth();
+        var firebaseAuthObject = $firebaseAuth(authObject);
+        var ui = new firebaseui.auth.AuthUI(authObject);
 
         var service = {
             firebaseAuthObject: firebaseAuthObject,
+            authObject: authObject,
+            firebaseUI: ui,
             register: register,
             login: login,
             logout: logout,

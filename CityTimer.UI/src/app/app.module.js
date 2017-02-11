@@ -31,11 +31,15 @@
         .config(configFunction)
         .run(runFunction);
 
-    configFunction.$inject = ['$routeProvider'];
+    configFunction.$inject = ['$routeProvider', '$locationProvider'];
 
-    function configFunction($routeProvider) {
+    function configFunction($routeProvider, $locationProvider) {
         $routeProvider.otherwise({
             redirectTo: '/'
+        });
+        $locationProvider.html5Mode({
+            enabled: false,
+            requireBase: true
         });
     }
 
@@ -46,6 +50,10 @@
             if (error === "AUTH_REQUIRED") {
                 $location.path('/');
             }
+        });
+        $rootScope.$on( "$routeChangeStart", function(event, next, current) {
+            if($location.path() === '')
+                $location.path('/login');
         });
     }
 

@@ -26,11 +26,13 @@
     "angular-ui-calendar": "latest",
     "angular-bootstrap": "~2.2.0",
     "fullcalendar": "2.7.1",
-    "moment-timezone": "^0.5.11"
+    "moment-timezone": "^0.5.11",
+    "firebaseui": "1.0.0"
   },
   "resolutions": {
     "angular": "1.5.11",
-    "moment": "~2.15.1"
+    "moment": "~2.15.1",
+    "firebase": "^3.3.0"
   },
   "overrides": {
     "jQuery": {
@@ -155,6 +157,15 @@
         "production": [
           "css/font-awesome.min.css",
           "fonts/fontawesome-webfont.woff"
+        ]
+      }
+    }
+    ,
+    "firebaseui": {
+      "main": {
+        "production": [
+          "dist/firebaseui.css",
+          "dist/firebaseui.js"
         ]
       }
     }

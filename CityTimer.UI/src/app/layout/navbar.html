@@ -13,7 +13,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#/places" ng-show="vm.isLoggedIn()">Places</a></li>
                 <li><a href="#/citytimer" ng-show="vm.isLoggedIn()">City time</a></li>
-                <li><a href="#/login" ng-hide="vm.isLoggedIn()">Log in</a></li>
+                <li><a href="#/login?mode=select" ng-hide="vm.isLoggedIn()">Log in</a></li>
                 <li><a href="#/register" ng-hide="vm.isLoggedIn()">Register</a></li>
                 <li><a href="" ng-click="vm.logout()" ng-show="vm.isLoggedIn()">Log out</a></li>
             </ul>
