@@ -16,9 +16,6 @@
         vm.login = login;
 
         vm.callback = function(currentUser, credential, redirectUrl) {
-                // Do something.
-                // Return type determines whether we continue the redirect automatically
-                // or whether we leave that to developer to handle.
                 $rootScope.$broadcast(AUTH_EVENTS.loginSuccess, {});
                 $location.path('/citytimer');
                 return false;
@@ -29,16 +26,12 @@
             callbacks: {
             signInSuccess: vm.callback,
                 uiShown: function() {
-                    // The widget is rendered.
-                    // Hide the loader.
                     document.getElementById('loader').style.display = 'none';
                 }
             },
             redirectUrl: '',
             credentialHelper: firebaseui.auth.CredentialHelper.ACCOUNT_CHOOSER_COM,
-            // Query parameter name for mode.
             queryParameterForWidgetMode: 'mode',
-            // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
             signInFlow: 'popup',
             signInOptions: [
                 firebase.auth.EmailAuthProvider.PROVIDER_ID

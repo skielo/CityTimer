@@ -10,6 +10,7 @@ done using the following technologies:
       - Hosting.
 	  - Storage.
     * AngularFire 3.2.0
+	* FirebaseUI
     * Google Places API
     * Google Maps TimeZone API
 	* Google Maps markers
@@ -19,6 +20,7 @@ done using the following technologies:
     * Azure Store Tables
     * Azure Service Bus
     * Microsoft Bot Framework
+	* Microsoft Power BI
     
 Functionality:
 
@@ -34,10 +36,11 @@ functions.
 	- Azure Service Bus (every time the bot receives a location puts a message in the service bus to trigger a NodeJs Azure Functions
 	- NodeJs Azure function to store the request received by the bot in Firebase.
 	- Use the new implementation of AngularFire 3.2.0 - Storage
+	- Microsoft Power BI to display data.
+	- FirebaseUI in order to improve the authentication flow.
 
 RoadMap:
 
-    * Use Power BI to show collected data.
     * Add admin Portal.
 
 Disclaimer:
