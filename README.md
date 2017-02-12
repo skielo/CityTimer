@@ -46,7 +46,7 @@ RoadMap:
 Disclaimer:
 
 The idea behind this app is to proof profency in different technologies. The code is not meant to be use in a production
-environment. It doesn't have any warranty and it's provided as "it is".
+environment.
 
 The MIT License
 
