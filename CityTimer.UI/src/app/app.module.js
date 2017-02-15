@@ -52,7 +52,7 @@
             }
         });
         $rootScope.$on( "$routeChangeStart", function(event, next, current) {
-            if($location.path() === '')
+            if(location.search === '?mode=select')
                 $location.path('/login');
         });
     }

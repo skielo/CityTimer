@@ -29,7 +29,7 @@
                     document.getElementById('loader').style.display = 'none';
                 }
             },
-            redirectUrl: '',
+            redirectUrl: '#/citytimer',
             credentialHelper: firebaseui.auth.CredentialHelper.ACCOUNT_CHOOSER_COM,
             queryParameterForWidgetMode: 'mode',
             signInFlow: 'popup',
